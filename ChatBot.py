@@ -5,7 +5,7 @@ from Messages import *
 from dataEgine import *
 
 
-access_token = 'YOUR_TOKEN'
+access_token = '5259616712:AAEXX2NG-AdbVUfCN7gWMsZ5sL_eSQiNEuw'
 bot = telebot.TeleBot(access_token)
 
 
@@ -23,7 +23,7 @@ def inline_menu():
 
 def generate_markup():
     """
-    Create menu with two buttons: 'Like' and 'Dislike'
+    Create menu with two buttons: 'beğendim' and 'beğenmedim'
     :return: ReplyKeyboardMarkup
     """
     markup = types.ReplyKeyboardMarkup(one_time_keyboard=False, resize_keyboard=True)
@@ -88,7 +88,7 @@ def echo(message):
 @bot.message_handler(func=lambda call: call.text == like_str or call.text == dislike_str)
 def echo(message):
     """
-    This function reacts to pressing buttons: 'Like' and 'Dislike'
+    This function reacts to pressing buttons: 'beğendim' and 'beğenmedim'
     If both users press 'Like', then bot sends them username from telegram.
     If somebody press 'Dislike', then chat finish.
     :param message:
